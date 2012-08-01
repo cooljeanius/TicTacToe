@@ -53,6 +53,9 @@
 #include <string.h>
 #include <ncurses.h> // Might have an easier way to display the game board in it, idk
 
+/*
+ * display_board() function: takes the contents of the board and prints them on the screen.
+ */
 int display_board(char board[3][3]); // Prototype
 int display_board(char board[3][3]) // Placeholder for display_board() function until I decide exactly how I'm going to do it
 {
@@ -77,6 +80,10 @@ int display_board(char board[3][3]) // Placeholder for display_board() function 
 	printf(" \n "); // just some extra whitespace for no reason
 	return 0;
 }
+
+/*
+ * input() function: gets input for either row number or column number and returns it
+ */
 int input(int number); // Prototype
 int input(int number) // Placeholder for input() function until I decide exactly how I'm going to do it
 {
@@ -109,6 +116,10 @@ int input(int number) // Placeholder for input() function until I decide exactly
 	}
 	return row_or_column;
 }
+
+/*
+ * winner() function: examines the board state and checks to see if there's a winner.
+ */
 int winner(char board[3][3]); // Prototype
 int winner(char board[3][3]) // Placeholder for winner() function until I decide exactly how I'm going to do it
 {
@@ -156,6 +167,9 @@ int winner(char board[3][3]) // Placeholder for winner() function until I decide
 	return winner_number;
 }
 
+/*
+ * Main function
+ */
 int main (int argc, const char * argv[]) { // Template for arguments for main()
 	int number = 0; // Initialize variable which is later passed to Input()
 	int player = 1; // Represent players as numbers
